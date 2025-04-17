@@ -1,0 +1,41 @@
+# building a container
+docker build -t image-name .
+
+# running docker
+docker run your-image-name
+
+# port mapping and running docker
+docker run -p 5173:5173 your-image-name
+
+# port mapping, removing the container once its stopped and running docker in interactive shell mode 
+docker run -it --rm -p 5173:5173 your-image-name sh
+
+# this command mounts the files and folders from the host machine's directory to the app directory inside the docker container
+docker run -p 5173:5173 -v "$(pwd):/app" docker-app
+
+# -v /app/node_modules --> This breaks the isolation between the host and container environments,
+# as the container depends on its own node_modules
+# (which may have platform-specific builds or configurations).
+
+docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules docker-app
+
+# gives you all the running containers
+docker ps
+
+# gives you all the containers in the docker 
+docker ps -a
+
+# stops a running container 
+docker stop container-id
+
+# removes all the stopped container
+docker container prune
+ 
+# removes a specific container with id
+docker rm container-id   -> this wont work if you try and stop a running container, so use
+
+# removes a running container with id
+docker rm container-id --force   -> this will force stop a running container
+
+
+install dependencies and rebuild
