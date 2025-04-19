@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useRouteError } from 'react-router-dom';
-
 const ErrorPage = () => {
   return (
     <div id="error-page">

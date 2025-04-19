@@ -7,8 +7,8 @@ const HeroSection = () => {
       <div className="hero-content basis-2/5 flex flex-col items-center justify-center bg-white-500">
         {" "}
         <h1 className="text-2xl font-playwrite py-6">Simply Savory</h1>
-        <h1 className="text-6xl tracking-wide font-opensans font">THAI INSPIRED</h1>
-        <h1 className="text-6xl tracking-wide font-opensans">CUISINE</h1>
+        <h1 className="text-5xl tracking-wide font-opensans font">DELICIOUS LONDON</h1>
+        <h1 className="text-5xl tracking-wide font-opensans">CUISINE</h1>
         <h1 className="text-base py-8 font-opensans">Savor the Spice of Life</h1>
         <Button className="font-opensans">Book A Table</Button>
       </div>
